@@ -46,9 +46,9 @@ for root, dirs, files in os.walk(dir):
             box2 = df.iloc[112:, 0:96]
             box3 = df.iloc[112:, 96:112]
 
-            box1 = flatten(box1)
-            box2 = flatten(box2)
-            box3 = flatten(box3)
+            box1 = flatten(box1.to_numpy())
+            box2 = flatten(box2.to_numpy())
+            box3 = flatten(box3.to_numpy())
 
             with open(txt1, 'a') as f:
                 f.write(box1 + '\n')
